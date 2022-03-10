@@ -23,12 +23,9 @@ Functions Needed:
 
 -submit(takes the user answer)
 
--Comparison that compares input to correct answer. 
+-Comparison that compares input to correct answer(message will display, scoreboard)
 
 
 -restart/reset(Makes the timer go back to a minute, scorebored, message)
 
 -pause Game(pause the timer/remove evt listeners for input)(game extention)
-
-
-
