@@ -3,7 +3,7 @@
 # Overview 
 
 
-![Project 1 Wireframe](pr1Wireframe.png)
+![Project 1 Wireframe](pr1wireframe.png)
 
 # Game Rules 
 
