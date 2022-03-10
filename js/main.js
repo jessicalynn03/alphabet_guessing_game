@@ -58,16 +58,24 @@ const userScore = document.getElementById("user-score")
 // timerNum.innerText = `${seconds}`;
 // }
 
-// function that records the value that the user inputs. 
 // declaring the variable 
 let userGuess; 
 
+
+
+//create a function that records the value that the user inputs when the "submit" button is clicked. 
 
 const userSubmit = (event) =>{
     event.preventDefault();
     // assigning the users guess to the variable
     userGuess = event.target.guess.value;
-    console.log(userGuess)
-}
+    userGuess = userGuess.toUpperCase();
+    console.log(userGuess);
+} 
 
+//create a function that will compare "letter" to the value of the input field. 
+
+// wrote an HTML code that will limit the number of characters in the input field to one character. 
+
+// wrote an html code that will limit allowed characters to only letters. 
 
