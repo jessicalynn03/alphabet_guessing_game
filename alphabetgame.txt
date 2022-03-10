@@ -1,4 +1,4 @@
-ALPHABET GUESSER
+LETTER GUESSER
 In JavaScript, create an array called alphabet with 26 elements. Each element should be a string consisting of one letter of the alphabet.
 
 Create a variable called "letter" with the value of null to start with.

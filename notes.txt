@@ -1,0 +1,34 @@
+Pseudo Code 
+
+Buttons (Event Listeners)
+Submit (correct letter appears on click)
+Start 
+pause 
+restart 
+
+QuerySelectors 
+submit 
+start 
+pause 
+restart 
+name 
+Timer 
+
+Functions Needed:
+-Timer (Will be counting down. must stop when winning score is reached by either the computer or player)
+
+-Random Letter Generator 
+
+-Text input that takes a letter 
+
+-submit(takes the user answer)
+
+-Comparison that compares input to correct answer. 
+
+
+-restart/reset(Makes the timer go back to a minute, scorebored, message)
+
+-pause Game(pause the timer/remove evt listeners for input)(game extention)
+
+
+
