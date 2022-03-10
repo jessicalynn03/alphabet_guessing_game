@@ -11,3 +11,4 @@ console.log(alphabet);
 let letter = null;
 
 // create a function that will assign the value of "letter" to a randomly selected element of alphabet array.
+
