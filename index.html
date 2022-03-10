@@ -15,28 +15,33 @@
 <!--     
     <p>I am thinking of a letter from A-Z. Can you guess what the letter is?</p> -->
     <section id="timer">
-        timer: <span id="timernum">1:00</span>
+        timer: <span id="timer-num">.0s</span>
     </section>
     <section id="scoreboard">
         <p>ScoreBoard</p>
         <ul>
-            <li id="user">You: <span id="userscore">0</span></li>
-            <li id="computer">Computer: <span id="compscore">0</span></li>
+            <li id="user">You: <span id="user-score">0</span></li>
+            <li id="computer">Computer: <span id="comp-score">0</span></li>
         </ul>
     </section>
-    <section id="">
-        <h2>
+    <section id="game-display">
+        <h2 id="letter-chosen">
             
         </h2>
+        <form id="game-form" onsubmit="userSubmit(event)">
+        <input type="Letter" id="guess" name="guess">
+        <input type="submit" id="submit-guess" value="Submit">
+        </form>
     </section>
-    <section id="game-message">
+    <section id="game-msg">
         <img src="bubble.png">
-        <p id="updatemsg">Ready to play!</p>
+        <h3 id="update-msg">
+            Ready to Play!
+        </h3>
     </section>
-    <form>
-    <input type="Letter" id="guess">
-    <input type="submit" id="submitguess" value="My Guess">
-    </form>
+    <section id="chosen-letters">
+        
+    </section>
     <section id="game-buttons">
         <ul>
             <button id="start-button">Start</button>
