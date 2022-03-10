@@ -1,0 +1,28 @@
+ALPHABET GUESSER
+In JavaScript, create an array called alphabet with 26 elements. Each element should be a string consisting of one letter of the alphabet.
+
+Create a variable called "letter" with the value of null to start with.
+
+Create a function that will assign the value of "letter" to a randomly selected element of alphabet array.
+
+Console log the value of "letter"
+
+Create a variable called "count" with an initial value of 0.
+
+Console.log the value of "count"
+
+- Commit your code and push to GitHub.
+
+Using HTML, create a form on your page that will display an input field and a button. Write JavaScript code that will print to the console the value that is inside the input field when the button is clicked. You must use "document.querySelector" or "document.getElementById", and "addEventListener" within your JavaScript code. You will also need to research how to use "e.preventDefault()" to get your code to work properly.
+
+- Commmit your code and push to GitHub.
+
+Write HTML code that will limit the number of characters in your input field to one character. Write HTML code that will limit allowed characters to only letters -- you will need to research "html pattern" for this. Write HTML code that will automatically change the input to a capitalized letter when the letter is entered.
+
+- Commmit your code and push to GitHub.
+
+In JavaScript, create a function that will compare "letter" to the value of the input field. The comparison should happen when the "Submit" button is clicked. If "letter" is equal to the value of the input field, console.log "they match!". If they are not identical, log "they don't match" to the console. You will need to research "toUpperCase()" to get this work properly.
+
+- Commit your code and push to GitHub.
+
+When you get to this point, ask an instructor to review your code and to get approval to continue building your Word Guesser game.
