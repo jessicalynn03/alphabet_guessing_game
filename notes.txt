@@ -29,3 +29,5 @@ Functions Needed:
 -restart/reset(Makes the timer go back to a minute, scorebored, message)
 
 -pause Game(pause the timer/remove evt listeners for input)(game extention)
+
+

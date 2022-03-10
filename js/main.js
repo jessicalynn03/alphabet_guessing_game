@@ -11,4 +11,17 @@ console.log(alphabet);
 let letter = null;
 
 // create a function that will assign the value of "letter" to a randomly selected element of alphabet array.
+// randomly choose a letter from the array and assign it to the value letter.
+const randomLetters = () =>{
+    const randomIndex = Math.floor(Math.random() * alphabet.length);
+    letter = alphabet[randomIndex];
+    console.log(letter);
+}
+randomLetters()
+
+// create a variable called count and initialize it to zero, then console.log it. 
+
+let count = 0; 
+
+console.log(count);
 

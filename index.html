@@ -9,13 +9,41 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <header><h1>Guess the Alphabet: A-Z</h1></header>
-    
-    <p>I am thinking of a letter from A-Z. Can you guess what the letter is?</p>
+    <header>
+        <h1>Letter Guessing Game: A-Z</h1>
+    </header>
+<!--     
+    <p>I am thinking of a letter from A-Z. Can you guess what the letter is?</p> -->
+    <section id="timer">
+        timer: <span>1:00</span>
+    </section>
+    <section id="scoreboard">
+        <p>ScoreBoard</p>
+        <ul>
+            <li id="user">You</li>
+            <li id="computer">Computer</li>
+        </ul>
+    </section>
+    <section>
+        <h2></h2>
+    </section>
+    <section id="game-message">
+        <img src="bubble.png">
+        <p id="updatemsg">Ready to play!</p>
+    </section>
     <form>
-    <label for="guess">My Guess</label>
     <input type="Letter" id="guess">
     <input type="submit" id="submitguess" value="My Guess">
     </form>
+    <section id="game-buttons">
+        <ul>
+            <button id="start-button">Start</button>
+            <button id="pause-button">Pause</button>
+            <button id="reset-button">Reset</button>
+        </ul>
+    </section>
+    <footer>
+        
+    </footer>
 </body>
 </html>
