@@ -30,4 +30,6 @@ Functions Needed:
 
 -pause Game(pause the timer/remove evt listeners for input)(game extention)
 
+-remove letters from the array 
+
 

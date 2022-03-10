@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alphabet Guessing Game</title>
+    <title>Letter Guessing Game</title>
     <script src="./js/main.js" async defer></script>
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -15,16 +15,16 @@
 <!--     
     <p>I am thinking of a letter from A-Z. Can you guess what the letter is?</p> -->
     <section id="timer">
-        timer: <span>1:00</span>
+        timer: <span id="timernum">1:00</span>
     </section>
     <section id="scoreboard">
         <p>ScoreBoard</p>
         <ul>
-            <li id="user">You</li>
-            <li id="computer">Computer</li>
+            <li id="user">You: <span id="userscore">0</span></li>
+            <li id="computer">Computer: <span id="compscore">0</span></li>
         </ul>
     </section>
-    <section>
+    <section id="">
         <h2>
             
         </h2>
@@ -45,7 +45,12 @@
         </ul>
     </section>
     <footer>
-        
+        <ul>
+            <li><a href="https://github.com/jessicalynn03" target="_blank">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/jessicabarthelemy/" target="_blank">LinkedIn</a></li>
+        </ul>
     </footer>
 </body>
 </html>
+
+
