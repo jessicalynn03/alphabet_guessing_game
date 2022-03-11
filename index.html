@@ -15,7 +15,7 @@
 <!--     
     <p>I am thinking of a letter from A-Z. Can you guess what the letter is?</p> -->
     <section id="timer">
-        timer: <span id="timer-num">.0s</span>
+        timer: <span id="timer-num">.30s</span>
     </section>
     <section id="scoreboard">
         <p>ScoreBoard</p>
@@ -29,8 +29,8 @@
             
         </h2>
         <form id="game-form" onsubmit="userSubmit(event)">
-        <input type="Letter" maxlength=1 pattern="[a-zA-Z]+" oninvalid="setCustomValidity('please enter alphabet letters only.')" id="guess" name="guess">
-        <input type="submit" id="submit-guess" value="Submit">
+            <input type="text" maxlength=1 pattern="[a-zA-Z]+" oninvalid="setCustomValidity('please enter alphabet letters only.')" id="guess" name="guess">
+            <input type="submit" id="submit-guess" value="Submit">
         </form>
     </section>
     <section id="game-msg">

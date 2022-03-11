@@ -6,6 +6,8 @@ let alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
 
 console.log(alphabet);
 
+let newAlphabet = [];
+
 // created a variable called "letter".
 
 let letter = null;
@@ -16,6 +18,10 @@ const randomLetters = () =>{
     const randomIndex = Math.floor(Math.random() * alphabet.length);
     letter = alphabet[randomIndex];
     console.log(letter);
+    // console.log(alphabet.splice(randomIndex, 1));
+    newAlphabet = alphabet.splice(randomIndex, 1);
+    console.log(newAlphabet);
+    console.log(alphabet);
 }
 randomLetters()
 
@@ -26,7 +32,7 @@ let count = 0;
 console.log(count);
 
 
-const compScore = document.getElementById("comps-score")
+const compScore = document.getElementById("comp-score")
 // 
 const gameDisplay = document.getElementById("game-display")
 // 
@@ -71,11 +77,43 @@ const userSubmit = (event) =>{
     userGuess = event.target.guess.value;
     userGuess = userGuess.toUpperCase();
     console.log(userGuess);
+    compareLetters();
 } 
 
-//create a function that will compare "letter" to the value of the input field. 
 
-// wrote an HTML code that will limit the number of characters in the input field to one character. 
+// wrote an HTML code that will limit the number of characters in the input field to one character. (line 32)
 
-// wrote an html code that will limit allowed characters to only letters. 
+// wrote an html code that will limit allowed characters to only letters.(line 32) 
+
+
+//create a function that will compare "letter" to the value of the input field. Comparison should happen when the "submit" button is clicked.
+
+let userNum = 0; // create var for user score number and set to 0
+let compNum = 0; // create var for computer score number and set to 0
+
+const compareLetters = () => {
+    // if user guesses correct letter, add one point to their score
+    if(userGuess === letter) {
+        if(userNum < 6) {
+            userNum++;
+            userScore.innerText = userNum;
+            if(userNum === 6) {
+                //game over function
+                //game over message
+            }
+        }
+        //game status message (Correct)
+     //if user guesses incorrectly, add one point to computer's score
+    } else if(userGuess !== letter) {
+        if(compNum < 12) {
+            compNum++
+            compScore.innerText = compNum;
+            if(compNum === 10) {
+                //game over function
+                //game over message
+            }
+        }
+        //game status message (Incorrect)
+    }
+}
 
