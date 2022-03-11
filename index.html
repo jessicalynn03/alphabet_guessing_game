@@ -12,31 +12,31 @@
     <header>
         <h1>Letter Guessing Game: A-Z</h1>
     </header>
-<!--     
-    <p>I am thinking of a letter from A-Z. Can you guess what the letter is?</p> -->
     <section id="timer">
         timer: <span id="timer-num">.30s</span>
     </section>
     <section id="scoreboard">
         <p>ScoreBoard</p>
-        <ul>
+        <ul class="score">
             <li id="user">You: <span id="user-score">0</span></li>
             <li id="computer">Computer: <span id="comp-score">0</span></li>
         </ul>
+        <!-- <p>I am thinking of a letter from A-Z. Can you guess what the letter is?</p> -->
     </section>
     <section id="game-display">
         <h2 id="letter-chosen">
             
         </h2>
+    </section>
         <form id="game-form" onsubmit="userSubmit(event)">
             <input type="text" maxlength=1 pattern="[a-zA-Z]+" oninvalid="setCustomValidity('please enter alphabet letters only.')" id="guess" name="guess">
             <input type="submit" id="submit-guess" value="Submit">
         </form>
     </section>
     <section id="game-msg">
-        <img src="bubble.png">
+        <img src="bubble.png" width="250" height="200">
         <h3 id="update-msg">
-            Ready to Play!
+           Ready to play!
         </h3>
     </section>
     <section id="chosen-letters">
@@ -50,7 +50,7 @@
         </ul>
     </section>
     <footer>
-        <ul>
+        <ul class="url-links">
             <li><a href="https://github.com/jessicalynn03" target="_blank">GitHub</a></li>
             <li><a href="https://www.linkedin.com/in/jessicabarthelemy/" target="_blank">LinkedIn</a></li>
         </ul>

@@ -1,0 +1,49 @@
+body {
+    text-align: center;
+}
+h1 {
+    font-size: 50px;
+    border: 1px solid black;
+}
+
+.url-links li {
+    display: inline;
+   position: relative;
+   top: 300px;
+   left: 125px;
+   padding: 5px;
+}
+.score li {
+    display: inline;
+}
+img {
+    float: right;
+    position: relative;
+    bottom: 175px;
+    left: 15px;
+    right: 100px;
+    
+}
+
+#game-buttons {
+    position: relative;
+    text-align: center;
+    top: 200px;
+    left: 115px;
+    padding: 20px;
+
+}
+#update-msg {
+    font-size: 25px;
+    text-align: right;
+    position: relative;
+    bottom: 105px;
+    left: 235px;
+}
+footer {
+    border: 1px solid black;
+}
+
+
+   
+
