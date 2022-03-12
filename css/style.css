@@ -1,9 +1,11 @@
 body {
     text-align: center;
+    background-image: url("letter.gif");
+    background: cover;
 }
 h1 {
     font-size: 50px;
-    border: 1px solid black;
+    border: 5px solid black;
 }
 
 .url-links li {
@@ -12,6 +14,7 @@ h1 {
    top: 300px;
    left: 125px;
    padding: 5px;
+   font-size: 20px;
 }
 .score li {
     display: inline;
@@ -29,7 +32,8 @@ img {
     position: relative;
     text-align: center;
     top: 200px;
-    left: 115px;
+    left: 110px;
+    right: 70px;
     padding: 20px;
 
 }
@@ -40,10 +44,24 @@ img {
     bottom: 105px;
     left: 235px;
 }
-footer {
-    border: 1px solid black;
+
+#timer {   
+    font-size: 30px;
 }
-
-
+button {
+    font-size: 20px;
+}
+input {
+    font-size: 20px;
+    position: relative;
+    top: 200px;
+}
+.score {
+    font-size: 20px;
+}
+#scoreboard {
+    position: relative;
+   
+}
    
 
