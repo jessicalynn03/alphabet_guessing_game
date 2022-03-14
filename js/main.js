@@ -103,22 +103,6 @@ const userSubmit = (event) =>{
     randomLetters();
 } 
 
-let list;
-let compLetterList = document.getElementById("comp-letter-list");
-
-const lettersChosen = () => {
-    list = document.createElement("li");
-    list.innerHTML = letter;
-    compLetterList.appendChild(list);
-    // document.getElementById("comp-letter-list").appendChild(list);
-}
-let listId = document.getElementById("chosen-letters");
-
-const removeList = () => {
-    // const liEl = document.querySelector("li");
-    compLetterList.remove(list);
-    // document.getElementById("comp-letter-list").remove(list);
-}
 
 // wrote an HTML code that will limit the number of characters in the input field to one character. (line 32)
 
@@ -168,60 +152,79 @@ const gameOver = () =>{
     submitGuess.disabled = true;
     timerNum.innerText = `0s`;
     // if(userNum === 2) {
-    //     clearInterval(updateCountdown);
-    // } else if(compNum ===2) {
-    //     clearInterval(updateCountdown)
-    // }
-}
-
-const startGame = () =>{
-    countDown();
-    randomLetters();
-    submitGuess.disabled = false;
-    // lettersChosen();
-    startBtn.removeEventListener("click", startGame);
-}
-startBtn.addEventListener("click", startGame);
-
-
-// Do not have to re-initialize variables. to change an element use innerText or innerContent
-const gameReset = () =>{
-    alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T","U", "V", "W", "X", "Y", "Z"];
-    // lettersChosen();
-    // const liEl = document.querySelectorAll("li");
-    // const listId = document.getElementById("chosen-letters");
-    seconds = 61;
-    timerNum.innerText = `60s`;
-    clearInterval(updateCountdown);
-    compNum = 0;
-    compScore.innerText = compNum;
-    userNum = 0;
-    userScore.innerText = userNum;
-    letterChosen.innerText = ``;
-    // to reset HTML form, you must use the .reset function.
-    gameForm.reset();
-    updateMsg.innerText = `Ready to Play!`;
-    submitGuess.disabled = true;
-    removeList();
-    compLetterList.appendChild(list);
-    startBtn.addEventListener("click", startGame);
-
-    let ulEl = document.createElement("ul");
-    ulEl.setAttribute("id", "comp-letter-list");
-    chosenLetters.appendChild(ulEl);
-    // list = document.createElement("li");
-    // list.innerHTML = letter;
-    // document.getElementById("comp-letter-list").appendChild(list);
-
-    // lettersChosenReset();
-    // list = document.createElement("li");
-    // list.innerHTML = letter;
-}
-
-const lettersChosenReset = () => { 
-    list = document.createElement("li");
-    list.innerHTML = letter;
+        //     clearInterval(updateCountdown);
+        // } else if(compNum ===2) {
+            //     clearInterval(updateCountdown)
+            // }
+        }
+        
+        const startGame = () =>{
+            countDown();
+            randomLetters();
+            submitGuess.disabled = false;
+            // lettersChosen();
+            startBtn.removeEventListener("click", startGame);
+        }
+        startBtn.addEventListener("click", startGame);
+        
+        
+        // Do not have to re-initialize variables. to change an element use innerText or innerContent
+        const gameReset = () =>{
+            alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T","U", "V", "W", "X", "Y", "Z"];
+            // lettersChosen();
+            // const liEl = document.querySelectorAll("li");
+            // const listId = document.getElementById("chosen-letters");
+            seconds = 61;
+            timerNum.innerText = `60s`;
+            clearInterval(updateCountdown);
+            compNum = 0;
+            compScore.innerText = compNum;
+            userNum = 0;
+            userScore.innerText = userNum;
+            letterChosen.innerText = ``;
+            // to reset HTML form, you must use the .reset function.
+            gameForm.reset();
+            updateMsg.innerText = `Ready to Play!`;
+            submitGuess.disabled = true;
+            compLetterList.appendChild(list);
+            startBtn.addEventListener("click", startGame);
+            
+            let ulEl = document.createElement("ul");
+            ulEl.setAttribute("id", "comp-letter-list");
+            chosenLetters.appendChild(ulEl);
+            removeList();
+            // lettersChosen();
+            // lettersChosenReset();
+            // list = document.createElement("li");
+            // list.innerHTML = letter;
+            // document.getElementById("comp-letter-list").appendChild(list);
+            
+            // lettersChosenReset();
+            // list = document.createElement("li");
+            // list.innerHTML = letter;
+        }
+        let list;
+        let compLetterList = document.getElementById("comp-letter-list");
+        
+        const lettersChosen = () => {
+            list = document.createElement("li");
+            list.innerHTML = letter;
+            compLetterList.appendChild(list);
+            // document.getElementById("comp-letter-list").appendChild(list);
+        }
+        let listId = document.getElementById("chosen-letters");
+        
+        const removeList = () => {
+            // const liEl = document.querySelector("li");
+            compLetterList.remove(list);
+            // document.getElementById("comp-letter-list").remove(list);
+        }
+        
+        const lettersChosenReset = () => { 
+        // list = document.createElement("li");
+        // list.innerHTML = letter;
     document.getElementById("comp-letter-list").appendChild(list);
+    // removeList();
 }
 
 resetBtn.addEventListener("click", gameReset);
