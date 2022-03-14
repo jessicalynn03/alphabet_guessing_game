@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Letter Guessing Game</title>
     <script src="./js/main.js" async defer></script>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <header>
@@ -26,6 +27,7 @@
         <h2 id="letter">
             Computer's Choice: <h2 id="letter-chosen"></h2>
         </h2>
+        <p>I am thinking of a letter from A-Z. Can you guess what that letter is?</p>
     </section>
     <section>
         <form id="game-form" onsubmit="userSubmit(event)">
@@ -41,7 +43,8 @@
         </h3>
     </section>
     <section id="chosen-letters">
-        
+        <h4>Letters Chosen:</h4>
+        <ul id="comp-letter-list"></ul>
     </section>
     <section id="game-buttons">
         <ul>
