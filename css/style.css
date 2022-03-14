@@ -1,12 +1,14 @@
-body {
+ body {
     text-align: center;
-    background-image: url("letter.gif");
-    background: cover;
+    /* background-image: url("https://i.pinimg.com/originals/f8/81/55/f8815575b0ff6f80511791bf2872eed3.gif"); */
+    /* background: cover; */
+   color: black;
 }
-h1 {
+/* h1 {
     font-size: 50px;
-    border: 5px solid black;
-}
+    border: 5px solid black; */
+    /* background: black; */
+/* }
 
 .url-links li {
     display: inline;
@@ -63,5 +65,5 @@ input {
     position: relative;
    
 }
-   
+    */ 
 

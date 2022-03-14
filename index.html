@@ -6,14 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Letter Guessing Game</title>
     <script src="./js/main.js" async defer></script>
-    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <header>
         <h1>Letter Guessing Game: A-Z</h1>
     </header>
     <section id="timer">
-        <strong>Timer:</strong> <span id="timer-num">.30s</span>
+        <strong>Timer:</strong> <span id="timer-num">60s</span>
     </section>
     <section id="scoreboard">
         <h2>ScoreBoard</h2>
@@ -24,8 +23,8 @@
         <!-- <p>I am thinking of a letter from A-Z. Can you guess what the letter is?</p> -->
     </section>
     <section id="game-display">
-        <h2 id="letter-chosen">
-            
+        <h2 id="letter">
+            Computer's Choice: <h2 id="letter-chosen"></h2>
         </h2>
     </section>
     <section>
@@ -33,6 +32,7 @@
             <input type="text" maxlength=1 pattern="[a-zA-Z]+" oninvalid="setCustomValidity('please enter alphabet letters only.')" id="guess" name="guess">
             <input type="submit" id="submit-guess" value="Submit">
         </form>
+        <!-- <button id="next-btn">Next</button> -->
     </section>
     <section id="game-msg">
         <img src="bubble.png" width="250" height="200">
@@ -45,9 +45,9 @@
     </section>
     <section id="game-buttons">
         <ul>
-            <button id="start-button">Start</button>
-            <button id="pause-button">Pause</button>
-            <button id="reset-button">Reset</button>
+            <button id="start-btn">Start</button>
+            <!-- <button id="pause-btn">Pause</button> -->
+            <button id="reset-btn">Reset</button>
         </ul>
     </section>
     <footer>

@@ -1,5 +1,7 @@
 Pseudo Code 
 
+Players get 60 seconds to guess as many letters correctly as they can. The computer will randomly generate letter in each round. Whoever gets to 10 first, wins!
+
 Buttons (Event Listeners)
 Submit (correct letter appears on click)
 Start 
@@ -23,13 +25,16 @@ Functions Needed:
 
 -submit(takes the user answer)
 
+-Next round allows user to 
+
 -Comparison that compares input to correct answer(message will display, scoreboard)
 
 
--restart/reset(Makes the timer go back to a minute, scorebored, message)
+-restart/reset(Makes the timer go back to a minute, scoreboard, message)
 
 -pause Game(pause the timer/remove evt listeners for input)(game extention)
 
 -remove letters from the array 
+
 
 

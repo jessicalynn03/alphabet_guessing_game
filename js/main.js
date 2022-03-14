@@ -1,6 +1,26 @@
-console.log("Hello");
+const submitGuess = document.getElementById("submit-guess")
+submitGuess.disabled = true;
 
 //Create array with 26 elements. Each element should be a string consisting of one letter of the alphabet. /*
+
+// Timer function
+
+// let time = 0;
+let seconds = 61;
+
+let updateCountdown;
+
+const countDown = () => {
+    updateCountdown = setInterval(function(){
+       if(seconds > 0){
+           seconds--
+           timerNum.innerText = `${seconds}s`;
+           if(seconds === 0){
+               gameOver();
+           }
+       }
+    }, 1000)
+}
 
 let alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T","U", "V", "W", "X", "Y", "Z"];
 
@@ -23,7 +43,7 @@ const randomLetters = () =>{
     console.log(newAlphabet);
     console.log(alphabet);
 }
-randomLetters()
+// randomLetters()
 
 // create a variable called count and initialize it to zero, then console.log it. 
 
@@ -41,28 +61,19 @@ const letterChosen = document.getElementById("letter-chosen")
 const chosenLetters = document.getElementById("chosen-letters")
 
 const gameForm = document.getElementById("game-form")
-const submitGuess = document.getElementById("submit-guess")
 
-const gameMsg = document.getElementById("game-msg")
+// const gameMsg = document.getElementById("game-msg")
 const updateMsg = document.getElementById("update-msg")
 const timerNum = document.getElementById("timer-num")
-const startButton = document.getElementById("start-button")
-const pauseButton = document.getElementById("pauseButton")
-const resetButton = document.getElementById("reset-button")
+const startBtn = document.getElementById("start-btn")
+// const pauseBtn = document.getElementById("pause-btn")
+const resetBtn = document.getElementById("reset-btn")
+const nextBtn = document.getElementById("next-btn")
 const userScore = document.getElementById("user-score")
 
 //e.preventDefault() prevents the page from reloading when submitting something into the input field. 
 
 // create a function that will print to the console the value that is inside the input field when the button is clicked. 
-
-// let time = 0;
-// let seconds = 30;
-
-
-// const countDown = () =>{
-// let seconds = time % 30;
-// timerNum.innerText = `${seconds}`;
-// }
 
 // declaring the variable 
 let userGuess; 
@@ -78,6 +89,11 @@ const userSubmit = (event) =>{
     userGuess = userGuess.toUpperCase();
     console.log(userGuess);
     compareLetters();
+    // clearInterval(updateCountdown);
+    // timerNum.innerText = `0s`;
+    letterChosen.innerText = `${letter}`;
+    // countDown();
+    randomLetters();
 } 
 
 
@@ -91,29 +107,77 @@ const userSubmit = (event) =>{
 let userNum = 0; // create var for user score number and set to 0
 let compNum = 0; // create var for computer score number and set to 0
 
+
 const compareLetters = () => {
     // if user guesses correct letter, add one point to their score
     if(userGuess === letter) {
-        if(userNum < 6) {
+        if(userNum < 2) {
             userNum++;
             userScore.innerText = userNum;
-            if(userNum === 6) {
+            if(userNum === 2) {
                 //game over function
-                //game over message
+                clearInterval(updateCountdown);
+                gameOver();
+                timerNum.innerText = `You Win`;
             }
         }
-        //game status message (Correct)
-     //if user guesses incorrectly, add one point to computer's score
+        //game status message (right)
+        updateMsg.innerText = `You're Right!`;
+        //if user guesses incorrectly, add one point to computer's score
     } else if(userGuess !== letter) {
-        if(compNum < 12) {
+        if(compNum < 2) {
             compNum++
             compScore.innerText = compNum;
-            if(compNum === 10) {
+            if(compNum === 2) {
                 //game over function
-                //game over message
+                clearInterval(updateCountdown);
+                gameOver();
+                timerNum.innerText = `Computer Wins`;
             }
         }
-        //game status message (Incorrect)
+        //game status message (wrong)
+        updateMsg.innerText = `You're Wrong!`;
     }
 }
 
+const gameOver = () =>{
+    letterChosen.innerText = ``;
+    submitGuess.disabled = true;
+    timerNum.innerText = `0s`;
+    // if(userNum === 2) {
+    //     clearInterval(updateCountdown);
+    // } else if(compNum ===2) {
+    //     clearInterval(updateCountdown)
+    // }
+}
+
+const startGame = () =>{
+    countDown();
+    randomLetters();
+    submitGuess.disabled = false;
+}
+startBtn.addEventListener("click", startGame);
+
+
+// Do not have to re-initialize variables. to change an element use innerText or innerContent
+const gameReset = () =>{
+    seconds = 61;
+    timerNum.innerText = `60s`;
+    clearInterval(updateCountdown);
+    compNum = 0;
+    compScore.innerText = compNum;
+    userNum = 0;
+    userScore.innerText = userNum;
+    letterChosen.innerText = ``;
+    // to reset HTML form, you must use the .reset function.
+    gameForm.reset();
+    updateMsg.innerText = `Ready to Play!`;
+    submitGuess.disabled = true;
+}
+
+resetBtn.addEventListener("click", gameReset);
+
+
+
+
+// nextBtn.addEventListener("click", nextRound);
