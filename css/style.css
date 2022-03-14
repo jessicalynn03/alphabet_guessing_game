@@ -1,17 +1,27 @@
  body {
     text-align: center;
-    /* background-image: url("https://i.pinimg.com/originals/f8/81/55/f8815575b0ff6f80511791bf2872eed3.gif"); */
-    /* background: cover; */
+    background-image: url("https://c.tenor.com/5_I50Sy1Y9cAAAAM/raining-raining-letters.gif"); 
+    background: cover;
    color: black;
+   border: 10px solid black;
 }
 h1 {
     font-size: 50px;
     border: 5px solid black; 
+    font-family: 'BhuTuka Expanded One', cursive;
+    margin: 15px;
+    padding: 15px;
     /* background: black; */
+}
+p {
+    font-size: 20px;
+    font-family: 'Ramaraja', serif;
 }
 
 .url-links li {
     display: inline;
+    font-size: 20px;
+    color: black;
    /* position: relative;
    top: 300px;
    left: 125px;
@@ -43,38 +53,58 @@ img {
     position: relative;
     bottom: 400px;
     right: 40px;
+    font-family: 'Sansita Swashed', cursive;
     /* top: 5px; */
     /* left: 235px; */
 }
 
 #timer {   
-    font-size: 20px;
+    font-size: 25px;
+    font-family: 'Anton', sans-serif;
 }
-/* button {
+button {
     font-size: 20px;
+    background: darkgray;
 }
 input {
     font-size: 20px;
-    position: relative;
-    top: 200px;
 }
 .score {
     font-size: 20px;
-} */
+    padding: 20px;
+} 
 #scoreboard {
-    text-align: left;
+    text-align: center;
+    border: 2px solid black;
+    width: 200px;
+    margin: 15px;
+    font-family: 'Sansita Swashed', cursive;
    
 } 
 
 #chosen-letters {
     position: relative;
     bottom: 200px;
-    left: 450px;
+    left: 600px;
     text-align: center;
-    border: 1px solid black;
-    width: 500px;
-    height: 300px;
+    border: 2px solid black;
+    width: 300px;
+    height: 500px;
 } 
 #comp-letter-list {
     list-style-type: none;
+    color: red;
+    font-size: 25px;
 } 
+
+#letter-chosen {
+    font-size: 30px;
+}
+
+#letter {
+    font-family: 'Anton', sans-serif;
+}
+#chosen {
+    font-family: 'Anton', sans-serif;
+    font-size: 20px;
+}
